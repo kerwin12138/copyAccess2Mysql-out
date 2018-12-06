@@ -1,0 +1,45 @@
+<c3p0-config>
+    <!-- 默认配置 -->
+  <default-config>
+          <!-- 连接参数 -->
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/fromMdb</property>
+        <property name="user">root</property>
+        <property name="password">root</property>
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+
+        <!-- 连接池参数 -->
+        <property name="initialPoolSize">3</property>
+        <property name="maxPoolSize">10</property>
+        <property name="checkoutTimeout">5000</property>
+        <property name="minPoolSize">1</property>
+
+  </default-config>
+
+    <!-- 命名配置 -->
+    <named-config name="wuxi_mysql">
+		<!-- 连接参数 -->
+		<property name="jdbcUrl">jdbc:mysql://localhost:3306/fromMdb</property>
+		<property name="user">root</property>
+		<property name="password">root</property>
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+
+		<!-- 连接池参数 -->
+		<property name="initialPoolSize">3</property>
+		<property name="maxPoolSize">10</property>
+		<property name="checkoutTimeout">5000</property>
+		<property name="minPoolSize">1</property>
+	</named-config>
+	
+	<named-config name="access">
+		<!-- 连接参数 -->
+		<property name="jdbcUrl">jdbc:ucanaccess://F:Other_D/dbf/NacuesCUniv.mdb</property>
+		<property name="driverClass">net.ucanaccess.jdbc.UcanaccessDriver</property>
+
+		<!-- 连接池参数 -->
+		<property name="initialPoolSize">2</property>
+		<property name="maxPoolSize">5</property>
+		<property name="checkoutTimeout">50000</property>
+		<property name="minPoolSize">1</property>
+	</named-config>
+
+</c3p0-config>
